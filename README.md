@@ -1,4 +1,4 @@
-# @deutschkihun/rcl
+# @deutschkihun/ui
 
 custom react component library designed by deutschkihun. 
 
