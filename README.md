@@ -2,12 +2,12 @@
 
 custom react component library designed by deutschkihun. 
 
-package url: https://www.npmjs.com/package/@deutschkihun/rcl
+package url: https://www.npmjs.com/package/@deutschkihun/ui
 
 
 ## How to use this library 
 
-`npm i @deutschkihun/rcl@latest
+`npm i @deutschkihun/ui@latest
 `
 
 ## Current component list
