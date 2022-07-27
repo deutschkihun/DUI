@@ -1,10 +1,10 @@
-import React from "react"
-import {render} from '@testing-library/react';
+import React from "react";
+import { render } from "@testing-library/react";
 
-import Button from './Button'
+import Button from "./Button";
 
-describe('Button', () => {
-    test('renders the button components', () => {
-        render(<Button variant="success" size="lg" disabled={false}>hello world</Button>)
-    })
-})
+describe("Button", () => {
+  test("renders the Button component", () => {
+    render(<Button disabled={false} variants="error" size="lg" label="Hello world!" />);
+  });
+});
