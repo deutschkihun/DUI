@@ -2,10 +2,10 @@ import React from "react";
 import "./Button.scss";
 
 export interface ButtonProps {
-  label: string;
-  size: string;
-  variants: string;
-  disabled: boolean;
+  label?: string;
+  size?: string;
+  variants?: string;
+  disabled?: boolean;
 }
 
 const Button = ({ label, size, variants, disabled }: ButtonProps) => {
