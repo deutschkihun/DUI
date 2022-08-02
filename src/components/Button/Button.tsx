@@ -6,11 +6,12 @@ export interface ButtonProps {
   size?: string;
   variants?: string;
   disabled?: boolean;
+  onClick?: () => void
 }
 
-const Button = ({ label, size, variants, disabled }: ButtonProps) => {
+const Button = ({ label, size, variants, disabled, onClick }: ButtonProps) => {
   return (
-    <button className={`${size} ${variants} ${disabled ? "isDisable" : ""}`}>
+    <button onClick={onClick} className={`${size} ${variants} ${disabled ? "isDisable" : ""}`}>
       {label}
     </button>
   );
