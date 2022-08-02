@@ -18,7 +18,7 @@ const Pagination = ({ total, limit, page, setPage }:Props) => {
         {Array(numPages)
           .fill(0)
           .map((_, i) => (
-            <button className='pagination-btn' key={i + 1} onClick={() => setPage(i + 1)} aria-current={page === i + 1 ? 'page' : undefined}>
+            <button className='pagination-btn' key={i + 1} onClick={() => setPage(i + 1)} aria-current={page === i + 1 ? 'page': undefined}>
               {i + 1}
             </button>
           ))}
@@ -28,6 +28,6 @@ const Pagination = ({ total, limit, page, setPage }:Props) => {
       </nav>
     )
   }
-
+  
 export default Pagination
   

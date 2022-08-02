@@ -14,6 +14,6 @@ export const Test = Template.bind({});
 Test.args = {
   total:10,
   limit:2,
-  page:4,
+  page:1,
 };
 
