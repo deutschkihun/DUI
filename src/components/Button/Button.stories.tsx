@@ -24,4 +24,5 @@ ClickMe.args = {
   size: "lg",
   variants: "error",
   disabled: false,
+  onClick: () => window.location.assign('https://deutschkihun.com')
 };

@@ -6,7 +6,8 @@ export interface ButtonProps {
   size?: string;
   variants?: string;
   disabled?: boolean;
-  onClick?: () => void
+  onClick?: React.EventHandler<React.MouseEvent | React.KeyboardEvent>;
+
 }
 
 const Button = ({ label, size, variants, disabled, onClick }: ButtonProps) => {
