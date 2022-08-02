@@ -1,6 +1,6 @@
 {
   "name": "@deutschkihun/ui",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "A simple template for a custom React component library by deutschkihun",
   "scripts": {
     "rollup": "rollup -c",

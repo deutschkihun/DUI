@@ -1,6 +1,5 @@
 import React from 'react'
-import { Nav, PagninationBtn } from './styles/styles';
-
+import "./styles/Pagination.scss";
 
 export interface Props {
     total: number;
@@ -12,21 +11,21 @@ export interface Props {
 const Pagination = ({ total, limit, page, setPage }:Props) => {
     const numPages = Math.ceil(total / limit)
     return (
-      <Nav>
-        <PagninationBtn onClick={() => setPage(page - 1)} disabled={page === 1}>
+      <nav className='pagination-nav'>
+        <button className='pagination-btn' onClick={() => setPage(page - 1)} disabled={page === 1}>
           &lt;
-        </PagninationBtn>
+        </button>
         {Array(numPages)
           .fill(0)
           .map((_, i) => (
-            <PagninationBtn key={i + 1} onClick={() => setPage(i + 1)} aria-current={page === i + 1 ? 'page' : false}>
+            <button className='pagination-btn' key={i + 1} onClick={() => setPage(i + 1)} aria-current={page === i + 1 ? 'page' : undefined}>
               {i + 1}
-            </PagninationBtn>
+            </button>
           ))}
-        <PagninationBtn onClick={() => setPage(page + 1)} disabled={page === numPages}>
+        <button className='pagination-btn' onClick={() => setPage(page + 1)} disabled={page === numPages}>
           &gt;
-        </PagninationBtn>
-      </Nav>
+        </button>
+      </nav>
     )
   }
 
