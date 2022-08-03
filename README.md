@@ -1,5 +1,7 @@
 # @deutschkihun/ui
 
+https://www.npmjs.com/package/@deutschkihun/ui
+
 ui template structured by react,typescript. designed by css and scss. bundled by rollup
 
 ### Install the library
