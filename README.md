@@ -42,6 +42,43 @@ const MyApp = () => {
 
 ## Pagination
 
+@deutschkihun/ui provides pagination component. This component has following options 
+
+- total: total number of content that should be handled by pagination option
+- limit: limit of the content in one page
+- page: current page
+- setPage: set here to change selected page (use here with react hook)
+
+example: item presentation from backend fetching by pagination
+
+```jsx
+import React, { useState } from 'react'
+import { Button } from '@deutschkihun/ui';
+
+const MyApp = () => {
+    const [limit, setLimit] = useState(8)
+    const [page, setPage] = useState(1)
+    const [items, setItems] = useState([])
+
+    // fetching data from backend
+    const getAllProducts = async () => {
+        await axios.get('/api/v1/products').then(response => {
+            if (response.data.length > 0) setItems(response.data.d3react)
+        })
+    }
+
+    useEffect(() => {
+        getAllProducts();
+    }, [])
+
+    return (
+        <div>
+            {/* add your rendering logic of items */}
+            <Pagination total={items.length} limit={limit} page={page} setPage={setPage} />
+        </div>
+    )
+}
+```
 
 ## Comming soon
 
