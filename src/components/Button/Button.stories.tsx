@@ -24,5 +24,8 @@ ClickMe.args = {
   size: "lg",
   variants: "error",
   disabled: false,
-  onClick: () => window.location.assign('https://deutschkihun.com')
+  onClick: () => alert("hello")
 };
+
+
+// https://yujo11.github.io/React/React-TS-Webpack-%EC%84%B8%ED%8C%85/

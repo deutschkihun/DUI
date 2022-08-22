@@ -1,18 +1,16 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import "./styles/Button.scss";
 
-export interface ButtonProps {
+export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   label?: string;
   size?: string;
   variants?: string;
   disabled?: boolean;
-  onClick?: React.EventHandler<React.MouseEvent | React.KeyboardEvent>;
-
 }
 
-const Button = ({ label, size, variants, disabled, onClick }: ButtonProps) => {
+const Button = ({ label, size, variants, disabled, ...props }: ButtonProps) => {
   return (
-    <button onClick={onClick} className={`${size} ${variants} ${disabled ? "isDisable" : ""}`}>
+    <button {...props} className={`${size} ${variants} ${disabled ? "isDisable" : ""}`}>
       {label}
     </button>
   );
