@@ -16,6 +16,8 @@ npm install @deutschkihun/ui
 
 1. [Button](#button)
 1. [Pagination](#pagination)
+1. [LoadingView](#loadingview)
+
 
 ## Button
 
@@ -82,8 +84,40 @@ const MyApp = () => {
 }
 ```
 
+
+## LoadingView
+
+@deutschkihun/ui provides LoadingView component. This component has following options 
+
+- title: set a title of loading spinner (string)
+- body: set a contet of loading spinner in body part (string)
+- img: set a image in the middle of loading spinner / this props uses img html tag with src (string)
+- waiting: set true to wait motion in loading spinner  (boolean) / default=false
+- slow: set true to controll the speed of loading spinner  (boolean) / default=false
+- size: set a number of size (number) / ex.) 100 
+
+example: item presentation from backend fetching by pagination
+
+```jsx
+import React, { useState } from 'react'
+import { Button } from '@deutschkihun/ui';
+
+const MyApp = () => {
+    return (
+        <div>
+            <LoadingView 
+                title='loading...'
+                body='please wait'
+                slow={true}
+                size={200}
+            />
+        </div>
+    )
+}
+```
+
 ## Comming soon
 
 1. [Modal](#modal)
-1. [Card](#card)
-
+1. [Table](#table)
+ 
