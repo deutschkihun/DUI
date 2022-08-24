@@ -118,6 +118,6 @@ const MyApp = () => {
 
 ## Comming soon
 
-1. [Modal](#modal)
 1. [Table](#table)
+1. [Card](#card)
  
