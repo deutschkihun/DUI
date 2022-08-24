@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const HelloWorld = Template.bind({});
 HelloWorld.args = {
-  label: "Hello world!",
+  children:<h1>hello</h1>,
   size: "sm",
   variant: "error",
   disabled: true,
@@ -20,7 +20,7 @@ HelloWorld.args = {
 
 export const ClickMe = Template.bind({});
 ClickMe.args = {
-  label: "Click me!",
+  children:<h1>bbber</h1>,
   size: "lg",
   variant: "error",
   disabled: false,

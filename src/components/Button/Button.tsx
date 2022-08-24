@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 
-export interface ButtonProps {
+export interface StyledButtonProps {
   sizeStyle?:FlattenSimpleInterpolation | undefined
   variantStyle?:FlattenSimpleInterpolation | undefined
 }
@@ -42,7 +42,7 @@ const VARIANTS = {
   `
 };
 
-const StyledButton = styled.button<ButtonProps>`
+const StyledButton = styled.button<StyledButtonProps>`
   ${(p) => p.sizeStyle}
   ${(p) => p.variantStyle}
 
@@ -75,7 +75,7 @@ export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 
-const Button = ({ disabled, size, variant, label,...props }:ButtonProps) => {
+const Button = ({ disabled, size, variant, children,...props }:ButtonProps) => {
   const sizeStyle = size === 'sm' ? SIZES.sm : size === 'md' ? SIZES.md : size === 'lg' ? SIZES.lg : undefined
   const variantStyle = variant === 'success' ? VARIANTS.success : variant === 'error' ? VARIANTS.error : variant === 'warning' ? VARIANTS.warning : undefined
 
@@ -86,7 +86,7 @@ const Button = ({ disabled, size, variant, label,...props }:ButtonProps) => {
       sizeStyle={sizeStyle}
       variantStyle={variantStyle}
     >
-      {label}
+      {children}
     </StyledButton>
   );
 }
