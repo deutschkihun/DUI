@@ -5,6 +5,6 @@ import Button from "./Button";
 
 describe("Button", () => {
   test("renders the Button component", () => {
-    render(<Button disabled={false} variants="error" size="lg" label="Hello world!" />);
+    render(<Button disabled={false} variant="error" size="lg" label="Hello world!" />);
   });
 });

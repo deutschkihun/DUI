@@ -14,7 +14,7 @@ export const HelloWorld = Template.bind({});
 HelloWorld.args = {
   label: "Hello world!",
   size: "sm",
-  variants: "error",
+  variant: "error",
   disabled: true,
 };
 
@@ -22,7 +22,7 @@ export const ClickMe = Template.bind({});
 ClickMe.args = {
   label: "Click me!",
   size: "lg",
-  variants: "error",
+  variant: "error",
   disabled: false,
   onClick: () => alert("hello")
 };
