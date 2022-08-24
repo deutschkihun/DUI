@@ -1,3 +1,4 @@
+import PeerDepsExternalPlugin from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
@@ -5,6 +6,7 @@ import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
 
 const packageJson = require("./package.json");
+const extensions = ["js","jsx","ts","tsx"]
 
 export default [
   {
@@ -21,9 +23,13 @@ export default [
         sourcemap: true,
       },
     ],
+    external: ['styled-components'],
     plugins: [
-      resolve(),
-      commonjs(),
+      PeerDepsExternalPlugin(),
+      resolve({extensions}),
+      commonjs({
+        include: /node_modules/
+      }),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
     ],
