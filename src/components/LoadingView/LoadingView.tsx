@@ -1,7 +1,5 @@
 import React, { ReactElement } from "react";
 import styled, { ThemeProps } from "styled-components";
-import "./styles/Loading.scss";
-
 
 class Metrics {
   static get maxWidth(): string {
