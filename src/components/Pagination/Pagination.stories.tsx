@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...ar
 export const Test = Template.bind({});
 Test.args = {
   total:10,
-  limit:2,
-  page:1,
+  limit:5,
+  page:2,
 };
 
