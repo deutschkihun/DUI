@@ -1,4 +1,4 @@
-# @deutschkihun/ui
+# ui.deutschkihun
 
 https://www.npmjs.com/package/@deutschkihun/ui
 
